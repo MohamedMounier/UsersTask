@@ -6,7 +6,7 @@ import 'package:users_task/presentation/widgets/slider_widgets/slider_dots_widge
 import 'package:users_task/resources/assets_manager.dart';
 
 class CustomSliderWidget extends StatefulWidget {
-   CustomSliderWidget({Key? key}) : super(key: key);
+   const CustomSliderWidget({Key? key}) : super(key: key);
 
   @override
   State<CustomSliderWidget> createState() => _CustomSliderWidgetState();
@@ -30,8 +30,8 @@ class _CustomSliderWidgetState extends State<CustomSliderWidget> {
           items: [1,2,3].map((i) {
             return Container(
                 height: 15.h,
-                margin: EdgeInsets.symmetric(horizontal: 5.0),
-                decoration: BoxDecoration(
+                margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                decoration: const BoxDecoration(
                   image: DecorationImage(image: AssetImage(AppImages.sliderImage),fit: BoxFit.fill),
 
                 ),

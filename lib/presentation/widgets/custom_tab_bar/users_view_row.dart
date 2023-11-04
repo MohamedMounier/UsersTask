@@ -10,6 +10,8 @@ class UsersViewRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Visibility(
       visible: currentIndex==0,
+
+      replacement: const SizedBox(),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -18,7 +20,6 @@ class UsersViewRow extends StatelessWidget {
               .grayLightText),),
         ],
       ),
-      replacement: SizedBox(),
     );
   }
 }

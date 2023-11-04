@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:users_task/resources/app_strings.dart';
 import 'package:users_task/resources/assets_manager.dart';
-import 'package:users_task/resources/size_config.dart';
 import 'package:users_task/resources/values_manager.dart';
 
 class WelcomeCard extends StatelessWidget {
@@ -27,7 +26,7 @@ class WelcomeCard extends StatelessWidget {
         Text(AppStrings.multiServicesTitle,
         style: Theme.of(context).textTheme.headlineMedium,
         ),
-        SizedBox(height: 5),
+        const SizedBox(height: 5),
         Text(AppStrings.multiServicesSubTitle,
           style: Theme.of(context).textTheme.headlineSmall,
         ),

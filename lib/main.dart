@@ -1,21 +1,15 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:users_task/presentation/dashboard.dart';
 import 'package:users_task/resources/theme_manager.dart';
 
-void main() {
-  // runApp(const MyApp(
-  //
-  // ));
-  runApp(DevicePreview(
-    enabled: true,
-    tools: [
-      ...DevicePreview.defaultTools,
+import 'enums.dart';
 
-    ],
-    builder: (context) => const MyApp(),
-  ),);
+void main() {
+  runApp(const MyApp(
+
+  ));
+
 }
 
 class MyApp extends StatelessWidget {
@@ -28,14 +22,12 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, deviceType) {
         return LayoutBuilder(
           builder: (context, constraints) {
-            print("max width ${constraints.maxWidth}");
-            print("max height ${constraints.maxHeight}");
-            return MaterialApp(
 
+            return MaterialApp(
               title: 'Users Task',
-              theme: AppThemeManager().getAppTheme(AppThemeEnum.LIGHT),
+              theme: AppThemeManager().getAppTheme(AppThemeEnum.light),
               debugShowCheckedModeBanner: false,
-              home: DashboardScreen(),
+              home: const DashboardScreen(),
             );
           },
         );
