@@ -13,19 +13,19 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      bottomNavigationBar: CustomButtomNavBar(),
-      appBar:  AppBar(leading: IconButton(onPressed: (){}, icon:const Icon(Icons.menu)),title: Text(AppStrings.home),),
-      body:Padding(padding: EdgeInsets.symmetric(horizontal: AppMargin.m20,
+      bottomNavigationBar: const CustomButtomNavBar(),
+      appBar:  AppBar(leading: IconButton(onPressed: (){}, icon:const Icon(Icons.menu)),title: const Text(AppStrings.home),),
+      body:const Padding(padding: EdgeInsets.symmetric(horizontal: AppMargin.m20,
       ),
       child: Column(
         children: [
-          const SizedBox(height:AppMargin.m16 ),
-          const WelcomeCard(),
-          const SizedBox(height:AppMargin.m16 ),
+           SizedBox(height:AppMargin.m16 ),
+           WelcomeCard(),
+           SizedBox(height:AppMargin.m16 ),
           CustomSliderWidget(),
-          const SizedBox(height:AppMargin.m16 ),
+           SizedBox(height:AppMargin.m16 ),
           Expanded(child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
+            padding:  EdgeInsets.symmetric(vertical: 8.0),
             child: ServicesWidget(),
           )),
 

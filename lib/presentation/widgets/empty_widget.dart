@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:users_task/resources/assets_manager.dart';
@@ -13,9 +12,9 @@ class EmptyWidget extends StatelessWidget {
         children: [
           Container(
             height: 17.h,
-            margin: EdgeInsets.symmetric(vertical: 15),
-            decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage(AppImages.emptyImage))
+            margin: const EdgeInsets.symmetric(vertical: 15),
+            decoration: const BoxDecoration(
+              image:  DecorationImage(image: AssetImage(AppImages.emptyImage))
             ),
           ),
            SizedBox(height: .05.h,),

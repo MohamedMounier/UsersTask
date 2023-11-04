@@ -24,9 +24,9 @@ class _ServicesWidgetState extends State<ServicesWidget> {
     });
   }
   List<Widget> pages=[
-    UserWidget(),
-    EmptyWidget(),
-    EmptyWidget()
+    const UserWidget(),
+    const EmptyWidget(),
+    const EmptyWidget()
 
   ];
   @override

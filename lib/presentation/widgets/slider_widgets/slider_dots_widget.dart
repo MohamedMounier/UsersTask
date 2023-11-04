@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:users_task/resources/app_colors.dart';
 
 class CustomSliderDotsWidget extends StatefulWidget {
-   CustomSliderDotsWidget({Key? key, required this.currentPage}) : super(key: key);
+   const CustomSliderDotsWidget({Key? key, required this.currentPage}) : super(key: key);
    final int currentPage;
 
   @override

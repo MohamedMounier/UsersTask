@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:users_task/resources/app_colors.dart';
+import '../enums.dart';
 import 'fonts_manager.dart';
 import 'styles_manager.dart';
 import 'values_manager.dart';
@@ -9,7 +10,7 @@ class AppThemeManager {
 
   ThemeData getAppTheme(AppThemeEnum appThemeEnum){
     switch (appThemeEnum){
-      case AppThemeEnum.LIGHT:
+      case AppThemeEnum.light:
         return _getLightAppTheme();
       default:
         return _getLightAppTheme();
@@ -19,28 +20,19 @@ class AppThemeManager {
     return ThemeData(
       // colors
       scaffoldBackgroundColor: AppColors.greyBackGround2,
-      // primaryColorLight: AppColors.lightPrimary,
-      // primaryColorDark: AppColors.darkPrimary,
-      // disabledColor: AppColors.grey1,
-      // splashColor: AppColors.lightPrimary,
-      // card view theme
-      cardTheme: CardTheme(
-        color: AppColors.white,
-        elevation: AppSize.s4,
-        // shadowColor: AppColors.lightGrey
-      ),
+
 
       //App bar Theme
       appBarTheme: AppBarTheme(
-          iconTheme: IconThemeData(color: AppColors.grayDark),
+          iconTheme: const IconThemeData(color: AppColors.grayDark),
           centerTitle: true,
           color: AppColors.white,
           elevation: 0,
           titleTextStyle: getBoldTextStyle(
               fontSize: FontSize.s20, color: AppColors.grayDark)),
       // Button Theme
-      buttonTheme: ButtonThemeData(
-        shape: const StadiumBorder(),
+      buttonTheme: const ButtonThemeData(
+        shape:  StadiumBorder(),
         // disabledColor: AppColors.grey1,
         buttonColor: AppColors.primary,
         // splashColor: AppColors.lightPrimary
@@ -81,8 +73,4 @@ class AppThemeManager {
       // input decoration theme
     );
   }
-}
-enum AppThemeEnum{
-  LIGHT,
-  DARK
 }
